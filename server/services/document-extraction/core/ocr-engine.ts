@@ -59,7 +59,7 @@ export class GoogleVisionOCREngine {
    * Configura cliente do Google Vision com as credenciais
    */
   private createVisionClient(): ImageAnnotatorClient {
-    const credentials = process.env.GOOGLE_APPLICATION_CREDENTIALS;
+    const credentials = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON;
     
     if (!credentials) {
       throw new Error('❌ Credenciais do Google Cloud não encontradas');
